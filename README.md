@@ -8,6 +8,9 @@
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
 }
 ```
+![WhatsApp Image 2021-09-01 at 2 19 07 PM](https://user-images.githubusercontent.com/46557268/131645068-b5174b4f-eb50-4106-9ec3-80cb60cdf5a9.jpeg)
+![WhatsApp Image 2021-09-01 at 2 19 06 PM](https://user-images.githubusercontent.com/46557268/131645117-77ca7bf8-5144-4e4d-9f4f-a99beeff0baa.jpeg)
+
 ### activity_main.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
