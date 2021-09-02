@@ -1,5 +1,7 @@
 # SharedPreferences 
-### Shared preferences allows to store data in form of XML Key Pair value. Where the value will be stored basis of key. Similar key will be used to access the value.
+<img src="https://user-images.githubusercontent.com/46557268/131819997-45376b37-98fb-4394-8861-9ba8f2fc6f67.png"  />
+
+###  Shared preferences allows to store data in form of XML Key Pair value. Where the value will be stored basis of key. Similar key will be used to access the value.
 
 ### It will always store latest value.
 
