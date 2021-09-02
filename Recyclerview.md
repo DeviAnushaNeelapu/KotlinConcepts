@@ -1,4 +1,5 @@
 # RecyclerView_Kotlin
+## Introduced in Android 5.0  with the feature of dynamic loading with less impact.
 ## Display large sets of data in your UI while minimizing memory usage.
 ### Dependencies of recyclerview 
  ``` 
