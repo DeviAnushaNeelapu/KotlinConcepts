@@ -3,6 +3,7 @@
 
 ### It will always store latest value.
 
+
 ## activity_main
 ```
 <?xml version="1.0" encoding="utf-8"?>
