@@ -1,4 +1,8 @@
 # SharedPreferences 
+### Shared preferences allows to store data in form of XML Key Pair value. Where the value will be stored basis of key. Similar key will be used to access the value.
+
+### It will always store latest value.
+
 ## activity_main
 ```
 <?xml version="1.0" encoding="utf-8"?>
