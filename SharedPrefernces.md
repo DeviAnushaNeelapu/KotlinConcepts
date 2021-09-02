@@ -53,4 +53,75 @@
         android:text="submit"/>
 </LinearLayout>
 ```
+# mainactivity.kt
+```
+package com.example.sharedprefernces
 
+import android.content.Context
+import android.content.SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.EditText
+
+class MainActivity : AppCompatActivity() {
+    var nameED : EditText? = null
+    var ageED: EditText? = null
+    var addressED: EditText? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+    override fun onStart() {
+        super.onStart()
+
+        nameED = findViewById(R.id.name);
+        ageED = findViewById(R.id.age)
+        addressED = findViewById(R.id.address)
+    }
+
+    //Procedure to save data withing Preferences
+    override fun onPause() {
+        super.onPause()
+
+        //1: Create a Shared Preferences Object
+        val sharedPreferences : SharedPreferences = this.getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
+
+        //2: Create and SharedPreferences Editor to edit the file.
+        val editor : SharedPreferences.Editor = sharedPreferences.edit()
+
+        //3.Add the data
+        editor.putString("nameKey",nameED!!.text.toString())
+        editor.putString("ageKey",ageED!!.text.toString())
+        editor.putString("addressKey",addressED!!.text.toString())
+
+        //4: Save Operation
+        editor.apply()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        //1: Create a Shared Preferences Object
+        val sharedPreferences :SharedPreferences = this.getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
+
+        //2: Reterive the value
+        val nameValue = sharedPreferences.getString("nameKey",null)
+        val ageValue = sharedPreferences.getString("ageKey",null)
+        val addressValue = sharedPreferences.getString("addressKey",null)
+
+        //3:Check the value
+        if(nameValue != null && ageValue!= null && addressValue!= null){
+            //3.1 Update the value with Edit Text US component
+
+            nameED!!.setText(nameValue.toString())
+            ageED!!.setText(ageValue.toString())
+            addressED!!.setText(addressValue.toString())
+        }
+
+    }
+}
+
+
+
+```
